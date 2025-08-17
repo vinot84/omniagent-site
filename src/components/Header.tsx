@@ -17,6 +17,7 @@ const Header: React.FC = () => {
     { href: "#agents-section", label: "Agents", id: "agents-section" },
     { href: "#testimonials-section", label: "Testimonials", id: "testimonials-section" },
     { href: "#pricing-section", label: "Pricing", id: "pricing-section" },
+    { href: "#faq-section", label: "FAQ", id: "faq-section" },
     { href: "#contact-section", label: "Contact", id: "contact-section" },
   ];
 

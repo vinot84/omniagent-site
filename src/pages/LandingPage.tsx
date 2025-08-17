@@ -6,6 +6,7 @@ import AIAgentTypesSection from "@/components/AIAgentTypesSection";
 import MarketOpportunitySection from "@/components/MarketOpportunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import GetEarlyAccessModal from '@/components/GetEarlyAccessModal';
@@ -41,6 +42,9 @@ const LandingPage: React.FC = () => {
         </div>
         <div id="pricing-section">
           <PricingSection onGetStartedClick={handleOpenModal} />
+        </div>
+        <div id="faq-section">
+          <FAQSection />
         </div>
       </main>
       <div id="contact-section">
