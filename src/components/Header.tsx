@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -20,12 +22,28 @@ const Header: React.FC = () => {
             Sign In
           </Button>
         </div>
-        {/* Mobile menu button (can be expanded later) */}
+        {/* Mobile menu button */}
         <div className="md:hidden">
-          <Button variant="ghost" size="icon">
-            {/* Icon for mobile menu, e.g., Menu from lucide-react */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[250px] sm:w-[300px]">
+              <nav className="flex flex-col gap-6 pt-8">
+                <a href="#how-it-works-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">How It Works</a>
+                <a href="#agents-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Agents</a>
+                <a href="#testimonials-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#pricing-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="#contact-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full">
+                  Sign In
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
