@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   onGetEarlyAccessClick: () => void;
+  onWatchDemoClick: () => void;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ onGetEarlyAccessClick }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ onGetEarlyAccessClick, onWatchDemoClick }) => {
   return (
     <section className="relative w-full py-20 md:py-32 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -21,7 +22,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetEarlyAccessClick }) => {
             className="px-8 py-3 text-lg bg-gray-900 hover:bg-gray-800 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
             Get Early Access
           </Button>
-          <Button variant="outline" className="px-8 py-3 text-lg border-gray-900 text-gray-900 hover:bg-gray-100 hover:text-gray-900 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+          <Button 
+            onClick={onWatchDemoClick}
+            variant="outline" 
+            className="px-8 py-3 text-lg border-gray-900 text-gray-900 hover:bg-gray-100 hover:text-gray-900 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
             Watch Demo
           </Button>
         </div>
