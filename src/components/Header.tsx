@@ -9,11 +9,11 @@ const Header: React.FC = () => {
           OmniAgent
         </div>
         <nav className="hidden md:flex space-x-6">
-          <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">How It Works</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Agents</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+          <a href="#how-it-works-section" className="text-gray-600 hover:text-blue-600 transition-colors">How It Works</a>
+          <a href="#agents-section" className="text-gray-600 hover:text-blue-600 transition-colors">Agents</a>
+          <a href="#testimonials-section" className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
+          <a href="#pricing-section" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+          <a href="#contact-section" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
         </nav>
         <div className="hidden md:block">
           <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 rounded-full">

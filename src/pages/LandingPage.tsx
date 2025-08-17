@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "@/components/Header"; // New import
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AIAgentTypesSection from "@/components/AIAgentTypesSection";
@@ -12,16 +12,29 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header /> {/* Added Header */}
+      <Header />
       <main className="flex-grow">
-        <HeroSection />
-        <HowItWorksSection />
-        <AIAgentTypesSection />
+        <div id="hero-section">
+          <HeroSection />
+        </div>
+        <div id="how-it-works-section">
+          <HowItWorksSection />
+        </div>
+        <div id="agents-section">
+          <AIAgentTypesSection />
+        </div>
+        {/* MarketOpportunitySection doesn't have a direct nav link, so no ID needed for now */}
         <MarketOpportunitySection />
-        <TestimonialsSection />
-        <PricingSection />
+        <div id="testimonials-section">
+          <TestimonialsSection />
+        </div>
+        <div id="pricing-section">
+          <PricingSection />
+        </div>
       </main>
-      <Footer />
+      <div id="contact-section">
+        <Footer />
+      </div>
       <MadeWithDyad />
     </div>
   );
