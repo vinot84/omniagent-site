@@ -3,7 +3,11 @@ import { CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-const PricingSection: React.FC = () => {
+interface PricingSectionProps {
+  onGetStartedClick: () => void;
+}
+
+const PricingSection: React.FC<PricingSectionProps> = ({ onGetStartedClick }) => {
   const pricingPlans = [
     {
       name: "Starter",
@@ -16,6 +20,7 @@ const PricingSection: React.FC = () => {
         "Standard Integrations",
       ],
       buttonText: "Get Started",
+      action: onGetStartedClick,
     },
     {
       name: "Pro",
@@ -30,6 +35,7 @@ const PricingSection: React.FC = () => {
       ],
       buttonText: "Choose Pro",
       highlight: true,
+      action: onGetStartedClick,
     },
     {
       name: "Enterprise",
@@ -43,6 +49,12 @@ const PricingSection: React.FC = () => {
         "Custom AI Model Training",
       ],
       buttonText: "Contact Sales",
+      action: () => {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      },
     },
   ];
 
@@ -71,7 +83,9 @@ const PricingSection: React.FC = () => {
                 </ul>
               </CardContent>
               <CardFooter className="p-0 mt-auto">
-                <Button className={`w-full py-3 text-lg rounded-full ${plan.highlight ? 'bg-gray-900 hover:bg-gray-800 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300'}`}>
+                <Button 
+                  onClick={plan.action}
+                  className={`w-full py-3 text-lg rounded-full ${plan.highlight ? 'bg-gray-900 hover:bg-gray-800 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300'}`}>
                   {plan.buttonText}
                 </Button>
               </CardFooter>
