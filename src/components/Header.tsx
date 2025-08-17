@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -25,13 +26,13 @@ const Header: React.FC = () => {
     <header className="w-full bg-white shadow-sm py-4 px-4 md:px-8 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold text-gray-900">
-          OmniAgent
+          <Link to="/">OmniAgent</Link>
         </div>
         <nav className="hidden md:flex space-x-6">
           {navLinks.map(link => (
             <a 
               key={link.id}
-              href={link.href} 
+              href={`/${link.href}`}
               onClick={(e) => handleNavClick(e, link.id)}
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
@@ -40,8 +41,8 @@ const Header: React.FC = () => {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button variant="outline" className="border-gray-900 text-gray-900 hover:bg-gray-100 hover:text-gray-900 rounded-full">
-            Sign In
+          <Button asChild variant="outline" className="border-gray-900 text-gray-900 hover:bg-gray-100 hover:text-gray-900 rounded-full">
+            <Link to="/sign-in">Sign In</Link>
           </Button>
         </div>
         {/* Mobile menu button */}
@@ -58,7 +59,7 @@ const Header: React.FC = () => {
                 {navLinks.map(link => (
                   <SheetClose asChild key={link.id}>
                     <a 
-                      href={link.href} 
+                      href={`/${link.href}`}
                       onClick={(e) => handleNavClick(e, link.id)}
                       className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors"
                     >
@@ -66,8 +67,8 @@ const Header: React.FC = () => {
                     </a>
                   </SheetClose>
                 ))}
-                <Button className="w-full mt-4 bg-gray-900 hover:bg-gray-800 text-white rounded-full">
-                  Sign In
+                <Button asChild className="w-full mt-4 bg-gray-900 hover:bg-gray-800 text-white rounded-full">
+                  <Link to="/sign-in">Sign In</Link>
                 </Button>
               </nav>
             </SheetContent>
