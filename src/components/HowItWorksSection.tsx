@@ -27,15 +27,15 @@ const HowItWorksSection: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <Card key={index} className="p-6 text-center shadow-lg rounded-xl hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="p-6 text-center shadow-lg rounded-xl hover:shadow-xl transition-shadow duration-300 border border-gray-200">
               <CardHeader className="flex flex-col items-center justify-center p-0 mb-4">
-                <div className="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                <div className="bg-gray-100 text-gray-700 p-4 rounded-full mb-4">
                   <step.icon size={36} />
                 </div>
-                <CardTitle className="text-xl font-semibold text-gray-800">{step.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold text-gray-900">{step.title}</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-700">{step.description}</p>
               </CardContent>
             </Card>
           ))}

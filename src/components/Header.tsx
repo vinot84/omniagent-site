@@ -11,14 +11,14 @@ const Header: React.FC = () => {
           OmniAgent
         </div>
         <nav className="hidden md:flex space-x-6">
-          <a href="#how-it-works-section" className="text-gray-600 hover:text-blue-600 transition-colors">How It Works</a>
-          <a href="#agents-section" className="text-gray-600 hover:text-blue-600 transition-colors">Agents</a>
-          <a href="#testimonials-section" className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
-          <a href="#pricing-section" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-          <a href="#contact-section" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+          <a href="#how-it-works-section" className="text-gray-700 hover:text-gray-900 transition-colors">How It Works</a>
+          <a href="#agents-section" className="text-gray-700 hover:text-gray-900 transition-colors">Agents</a>
+          <a href="#testimonials-section" className="text-gray-700 hover:text-gray-900 transition-colors">Testimonials</a>
+          <a href="#pricing-section" className="text-gray-700 hover:text-gray-900 transition-colors">Pricing</a>
+          <a href="#contact-section" className="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
         </nav>
         <div className="hidden md:block">
-          <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700 rounded-full">
+          <Button variant="outline" className="border-gray-900 text-gray-900 hover:bg-gray-100 hover:text-gray-900 rounded-full">
             Sign In
           </Button>
         </div>
@@ -33,12 +33,12 @@ const Header: React.FC = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[250px] sm:w-[300px]">
               <nav className="flex flex-col gap-6 pt-8">
-                <a href="#how-it-works-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">How It Works</a>
-                <a href="#agents-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Agents</a>
-                <a href="#testimonials-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Testimonials</a>
-                <a href="#pricing-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
-                <a href="#contact-section" className="text-lg font-medium text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full">
+                <a href="#how-it-works-section" className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors">How It Works</a>
+                <a href="#agents-section" className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors">Agents</a>
+                <a href="#testimonials-section" className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors">Testimonials</a>
+                <a href="#pricing-section" className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors">Pricing</a>
+                <a href="#contact-section" className="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
+                <Button className="w-full mt-4 bg-gray-900 hover:bg-gray-800 text-white rounded-full">
                   Sign In
                 </Button>
               </nav>

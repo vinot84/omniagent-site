@@ -26,15 +26,15 @@ const AIAgentTypesSection: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {agentTypes.map((agent, index) => (
-            <Card key={index} className="p-6 text-center shadow-md rounded-xl hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="p-6 text-center shadow-md rounded-xl hover:shadow-lg transition-shadow duration-300 border border-gray-200">
               <CardHeader className="flex flex-col items-center justify-center p-0 mb-4">
-                <div className="bg-blue-50 text-blue-600 p-3 rounded-full mb-3">
+                <div className="bg-gray-50 text-gray-700 p-3 rounded-full mb-3">
                   <agent.icon size={32} />
                 </div>
-                <CardTitle className="text-lg font-semibold text-gray-800">{agent.name}</CardTitle>
+                <CardTitle className="text-lg font-semibold text-gray-900">{agent.name}</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <p className="text-sm text-gray-600">{agent.description}</p>
+                <p className="text-sm text-gray-700">{agent.description}</p>
               </CardContent>
             </Card>
           ))}

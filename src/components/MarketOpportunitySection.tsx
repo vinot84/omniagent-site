@@ -10,7 +10,7 @@ const MarketOpportunitySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-blue-600 text-white">
+    <section className="py-16 md:py-24 bg-gray-900 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
           The Future of Work is Here
@@ -20,7 +20,7 @@ const MarketOpportunitySection: React.FC = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <Card key={index} className="bg-blue-700 text-white p-6 rounded-xl shadow-lg border-none">
+            <Card key={index} className="bg-gray-800 text-white p-6 rounded-xl shadow-lg border border-gray-700">
               <CardHeader className="p-0 mb-4">
                 <CardTitle className="text-5xl font-extrabold">{stat.value}</CardTitle>
               </CardHeader>

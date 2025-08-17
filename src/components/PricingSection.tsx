@@ -54,24 +54,24 @@ const PricingSection: React.FC = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {pricingPlans.map((plan, index) => (
-            <Card key={index} className={`p-6 rounded-xl shadow-lg flex flex-col ${plan.highlight ? 'border-2 border-blue-600 scale-105' : 'border border-gray-200'} transition-all duration-300 hover:shadow-xl`}>
+            <Card key={index} className={`p-6 rounded-xl shadow-lg flex flex-col ${plan.highlight ? 'border-2 border-gray-900 scale-105' : 'border border-gray-200'} transition-all duration-300 hover:shadow-xl`}>
               <CardHeader className="p-0 mb-6 text-center">
-                <CardTitle className={`text-2xl font-bold mb-2 ${plan.highlight ? 'text-blue-600' : 'text-gray-900'}`}>{plan.name}</CardTitle>
-                <p className="text-5xl font-extrabold text-gray-900 mb-2">{plan.price}</p>
-                <p className="text-gray-600">{plan.per}</p>
+                <CardTitle className={`text-2xl font-bold mb-2 ${plan.highlight ? 'text-gray-900' : 'text-gray-900'}`}>{plan.name}</CardTitle>
+                <p className={`text-5xl font-extrabold mb-2 ${plan.highlight ? 'text-gray-900' : 'text-gray-900'}`}>{plan.price}</p>
+                <p className="text-gray-700">{plan.per}</p>
               </CardHeader>
               <CardContent className="p-0 flex-grow mb-8">
                 <ul className="space-y-3 text-left">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-700">
-                      <CheckCircle className="text-blue-500 mr-2 flex-shrink-0" size={20} />
+                      <CheckCircle className="text-gray-700 mr-2 flex-shrink-0" size={20} />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter className="p-0 mt-auto">
-                <Button className={`w-full py-3 text-lg rounded-full ${plan.highlight ? 'bg-blue-600 hover:bg-blue-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-300'}`}>
+                <Button className={`w-full py-3 text-lg rounded-full ${plan.highlight ? 'bg-gray-900 hover:bg-gray-800 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300'}`}>
                   {plan.buttonText}
                 </Button>
               </CardFooter>
