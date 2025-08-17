@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from "@/components/Header"; // New import
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AIAgentTypesSection from "@/components/AIAgentTypesSection";
@@ -11,6 +12,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <Header /> {/* Added Header */}
       <main className="flex-grow">
         <HeroSection />
         <HowItWorksSection />
